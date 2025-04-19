@@ -7,6 +7,10 @@ gsap.registerPlugin(ScrollTrigger)
 export default function LandingSections() {
     
     const titleRef = useRef(null);
+    const aboutUsRef = useRef(null);
+    const aboutDownRef = useRef(null);
+
+
 
     useEffect(() => {
 
@@ -32,6 +36,47 @@ export default function LandingSections() {
             }
           );
 
+          
+        gsap.fromTo(
+          aboutUsRef.current,
+          {
+            opacity: 1,
+            y: 0,
+            filter: 'blur(0px)',
+          },
+          {
+            opacity: 0,
+            y: -20,
+            filter: 'blur(8px)',
+            scrollTrigger: {
+              trigger: aboutUsRef.current,
+              start: 'top 20%',
+              end: 'top 0%',
+              scrub: true, // Animación ligada al scroll
+            },
+          }
+        );
+
+        gsap.fromTo(
+          aboutDownRef.current,
+          {
+            opacity: 1,
+            y: 0,
+            filter: 'blur(0px)',
+          },
+          {
+            opacity: 0,
+            y: -70,
+            filter: 'blur(8px)',
+            scrollTrigger: {
+              trigger: aboutDownRef.current,
+              start: 'top 70%',
+              end: 'top 30%',
+              scrub: true, // Animación ligada al scroll
+            },
+          }
+        );
+
     }, [])
 
   return (
@@ -46,11 +91,20 @@ export default function LandingSections() {
 
         </section>
 
-        <section class="section texto">
-        
+        <section id='about' class="section about">
+
+          <div className="about-title" ref={aboutUsRef}>
+            <h2 >ABOUT US</h2>
+            <h1 >WHAT IS ORBYTE?</h1>
+          </div>
+          <div className="about-text" ref={aboutDownRef}>
+            <p>ORBYTE is a digital design and development studio founded <br/> in Buenos Aires, Argentina.</p>
+            <p>We specialize in creating realistic and functional<br/> user experiences, merging design, technology, and <br/> interaction.</p>
+          </div>
+
         </section>
 
-        <section class="section final">
+        <section id='d' class="section final">
         
         </section>
 

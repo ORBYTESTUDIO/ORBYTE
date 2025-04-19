@@ -8,9 +8,9 @@ export default function Header() {
       </div>
       <nav className="nav-menu">
         <ul>
-          <li>ABOUT US</li>
+          <li><a href="#about">ABOUT US</a></li>
           <li>SERVICES</li>
-          <li>CONTACT</li>
+          <li><a href="">CONTACT</a></li>
         </ul>
       </nav>
     </header>

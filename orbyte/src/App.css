@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'ITC';
   src: url('../public/fonts/ITC Avant Garde Gothic Pro-Book.otf') format('opentype');
@@ -16,6 +20,13 @@ body {
   font-family: 'ITC', sans-serif;
   background: #000;
   color: white;
+}
+
+a{
+  
+    text-decoration: none;
+    color: inherit;
+  
 }
 
 .logo{
@@ -38,14 +49,15 @@ body {
 }
 
 .section.home{
-  position: relative;
-  height: 100vh;
   padding: 40px;
   box-sizing: border-box;
-  display: flex;
   flex-direction: column;
 }
 
+.section.about{
+  box-sizing: border-box;
+  padding: 40px;
+}
 
 
 .home-text{
@@ -104,3 +116,49 @@ canvas {
 }
 
 
+.about-title {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  text-align: left;
+}
+
+.about-title h3,
+.about-title h1 {
+  font-family: 'ITC';
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.2;
+  transition: filter 0.3s ease;
+  filter: blur(0px);
+}
+
+.about-title h3 {
+  font-size: 16px;
+  opacity: 0.7;
+  letter-spacing: 2px;
+}
+
+.about-title h1 {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.about-text {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  
+}
+
+.about-text p {
+  font-family: 'ITC';
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.about-text p + p {
+  margin-top: 10px;
+}
