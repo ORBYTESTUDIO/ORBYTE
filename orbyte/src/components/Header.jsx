@@ -9,8 +9,8 @@ export default function Header() {
       <nav className="nav-menu">
         <ul>
           <li><a href="#about">ABOUT US</a></li>
-          <li>SERVICES</li>
-          <li><a href="">CONTACT</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#services">CONTACT</a></li>
         </ul>
       </nav>
     </header>

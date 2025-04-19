@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef,useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Header from './Header'
@@ -10,8 +10,16 @@ export default function LandingSections() {
     const aboutUsRef = useRef(null);
     const aboutDownRef = useRef(null);
 
+    const servicesTexts = {
+      text1: 'We design and develop unique, functional, and visually powerful web experiences. We adapt technology to visual storytelling, creating tailored digital spaces that connect with users from the first scroll.',
+      text2: `We develop custom software, from in-house systems to complex interactive tools. We think of software as a living product: we design it with logic, clarity, and a long-term vision.`,
+      text3: `We create highly detailed three-dimensional visuals with realistic lighting and cinematic aesthetics. We use 3D as an expressive tool that can enhance an interface, tell a story, or transform an idea into an immersive visual environment.`,
+};
 
 
+    const [servicesText, setServicesText] = useState(servicesTexts.text1);
+
+    
     useEffect(() => {
 
     
@@ -105,6 +113,25 @@ export default function LandingSections() {
         </section>
 
         <section id='d' class="section final">
+        
+        </section>
+
+        <section id='services' className="section services">
+
+          <div className='services-top'>
+            <h2>SERVICES</h2>
+            <p onClick={() => setServicesText(servicesTexts.text1)}>WEB DESIGN & DEVELOPMENT</p>
+            <p onClick={() => setServicesText(servicesTexts.text2)}>SOFTWARE & SYSTEMS</p>
+            <p onClick={() => setServicesText(servicesTexts.text3)}>REALISTIC 3D RENDERING</p>
+          </div>
+
+          <div className='services-bottom'>
+            <p>{servicesText}</p>
+          </div>
+
+        </section>
+
+        <section id='d' class="section contact">
         
         </section>
 

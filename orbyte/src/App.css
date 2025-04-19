@@ -59,6 +59,11 @@ a{
   padding: 40px;
 }
 
+.section.services{
+  box-sizing: border-box;
+  padding: 40px;
+}
+
 
 .home-text{
   font-size: 64px;
@@ -162,3 +167,31 @@ canvas {
 .about-text p + p {
   margin-top: 10px;
 }
+
+
+.services-top{
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  text-align: left;
+}
+
+.services-top p{
+  cursor: pointer;
+}
+
+.services-bottom{
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 35%;
+}
+
+.services-bottom p{
+  font-family: 'ITC';
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
